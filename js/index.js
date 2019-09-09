@@ -20,7 +20,7 @@ aTags.forEach((nav) => {
   nav.addEventListener('mouseover', (event) => {
     nav.style.transform = 'scale(1.4)';
     nav.style.transition = 'transform 0.5s'; 
-    nav.preventDefault();
+   
   })
   aTags.forEach((nav) => {
     nav.addEventListener('mouseout', (event) => {
@@ -32,24 +32,14 @@ aTags.forEach((nav) => {
 
 
 
-
-// 4 
-const imagesAll = document.querySelectorAll ('img');
-imagesAll.forEach((img) => {
-  img.addEventListener('dblclick', (event) => {
-img.src = 'https://cdn.admonsters.com/wp-content/uploads/2018/07/doubleclick-660.png';
-img.alt ='double click me'
-  })
-});
-
-// 5 
+  // 4
 const funBus = document.querySelector ('h1');
 funBus.addEventListener('auxclick', (event) => {
 alert ('you should not copy this');
 
 });
 
-//6 , 7
+//5,6
 const highLighter = document.querySelector ('body');
 highLighter.addEventListener('keydown', (event) => {
   highLighter.style.color = 'orange';
@@ -61,20 +51,36 @@ highLighter.addEventListener('keyup', (event) => {
 
 
 // scroll not working
-// 8
-const scrollWindow = document.querySelector ('body');
-scrollWindow.addEventListener('scroll', (event) => {
-  scrollWindow.style.color = 'gray';
+// 7,8
+const scrollWindow = document.querySelector ('.footer');
+scrollWindow.addEventListener('wheel', (event) => {
+  scrollWindow.style.transform = 'scale(1.4)';
+ 
 });
+scrollWindow.addEventListener('click', (event) => {
+  scrollWindow.style.transform = 'scale(1.0)';
+});
+ 
+// 9, 10
 
-
-
+const imagesAll = document.querySelectorAll ('img');
+imagesAll.forEach((img) => {
+  img.addEventListener('dblclick', (event) => {
+img.src = 'https://cdn.admonsters.com/wp-content/uploads/2018/07/doubleclick-660.png';
+img.alt ='double click me'
+  })
+  imagesAll.forEach((img) => {
+    img.addEventListener('drag', (event) => {
+console.log('it is working');
+})
+});
+});
 
 
 //* prevent default not working
 
-aTags.forEach((nav) => {
-  nav.addEventListener('click', (event) => {
-    nav.preventDefault();
-  })
-});
+// aTags.forEach((nav) => {
+//   nav.addEventListener('click', (event) => {
+//     nav.preventDefault();
+//   })
+// });
