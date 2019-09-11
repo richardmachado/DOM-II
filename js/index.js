@@ -77,10 +77,10 @@ console.log('it is working');
 });
 
 
-//* prevent default not working
 
-// aTags.forEach((nav) => {
-//   nav.addEventListener('click', (event) => {
-//     nav.preventDefault();
-//   })
-// });
+
+aTags.forEach((nav) => {
+  nav.addEventListener('click', (event) => {
+    event.preventDefault();
+  })
+});
