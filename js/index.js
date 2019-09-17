@@ -71,7 +71,7 @@ img.alt ='double click me'
   })
   imagesAll.forEach((img) => {
     img.addEventListener('drag', (event) => {
-console.log('it is working');
+
 })
 });
 });
