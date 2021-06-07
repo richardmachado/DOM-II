@@ -66,7 +66,7 @@ scrollWindow.addEventListener('click', (event) => {
 const imagesAll = document.querySelectorAll ('img');
 imagesAll.forEach((img) => {
   img.addEventListener('dblclick', (event) => {
-img.src = 'https://cdn.admonsters.com/wp-content/uploads/2018/07/doubleclick-660.png';
+img.src = 'https://infotrust.com/wp-content/uploads/2018/02/Double-Click-FI.jpg';
 img.alt ='double click me'
   })
   imagesAll.forEach((img) => {
